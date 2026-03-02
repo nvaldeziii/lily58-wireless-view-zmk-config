@@ -15,10 +15,10 @@
         default2 {
             display-name = "Base";
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4          &kp N5           &kp ESC                               &kp N6     &kp N6          &kp N7        &kp N8     &kp N9   &kp N0
+&kp N1  &kp N2  &kp N3  &kp N4          &kp N5           &kp ESC                               &mo 3      &kp N6          &kp N7        &kp N8     &kp N9   &kp N0
 &kp Q   &kp W   &kp F   &kp P           &kp B            &kp B                                 &kp J      &kp J           &kp L         &kp U      &kp Y    &kp SEMI
 &kp A   &kp R   &kp S   &kp T           &kp G            &kp G                                 &kp M      &kp M           &kp N         &kp E      &kp I    &kp O
-&kp Z   &kp X   &kp C   &kp D           &kp D            &kp V      &mo 1             &mo 2    &kp K      &kp K           &kp H         &kp COMMA  &kp DOT  &kp FSLH
+&kp Z   &kp X   &kp C   &kp D           &kp D            &kp V      &mo 1             &mo 0    &kp K      &kp K           &kp H         &kp COMMA  &kp DOT  &kp FSLH
                         &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp LEFT_SHIFT    &kp RET  &kp SPACE  &kp DOWN_ARROW  &kp UP_ARROW
             >;
         };
@@ -33,26 +33,26 @@
 
             display-name = "Lower";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp GRAVE                         &trans            &kp F6             &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &none   &none   &none   &none   &kp EQUAL                         &kp LEFT_BRACE    &kp RIGHT_BRACE    &none   &none   &none   &trans
-&trans  &none   &none   &none   &none   &kp PLUS                          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none   &none   &none   &trans
-&trans  &none   &none   &none   &none   &kp MINUS       &none     &none   &kp PIPE          &kp BACKSLASH      &none   &none   &none   &trans
-                        &trans  &trans  &kp UNDERSCORE  &trans    &trans  &kp UNDERSCORE    &trans             &trans
+&kp F1  &kp F2  &kp F3  &kp F4     &kp F5  &kp GRAVE                         &trans          &kp F6  &kp F7            &kp F8             &kp F9  &kp F10
+&none   &none   &none   &kp EQUAL  &none   &trans                            &trans          &none   &kp LEFT_BRACE    &kp RIGHT_BRACE    &none   &none
+&none   &none   &none   &kp PLUS   &none   &trans                            &trans          &none   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none   &none
+&none   &none   &none   &kp MINUS  &none   &trans          &none     &none   &trans          &none   &kp PIPE          &kp BACKSLASH      &none   &none
+                        &trans     &trans  &kp UNDERSCORE  &trans    &trans  &kp UNDERSCORE  &trans  &trans
             >;
         };
 
         raise_layer {
             display-name = "Raise";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp GRAVE                           &trans          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &none   &none   &none   &none   &kp EQUAL                           &none           &none   &none   &none   &none   &trans
-&trans  &none   &none   &none   &none   &kp PLUS                            &none           &none   &none   &none   &none   &trans
-&trans  &none   &none   &none   &none   &kp MINUS       &kp LWIN    &none   &none           &none   &none   &none   &none   &trans
-                        &trans  &trans  &kp UNDERSCORE  &trans      &trans  &kp UNDERSCORE  &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp F4     &kp F5  &kp GRAVE                           &trans          &kp F6  &kp F7            &kp F8             &kp F9  &kp F10
+&none   &none   &none   &kp EQUAL  &none   &trans                              &trans          &none   &kp LEFT_BRACE    &kp RIGHT_BRACE    &none   &none
+&none   &none   &none   &kp PLUS   &none   &trans                              &trans          &none   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none   &none
+&none   &none   &none   &kp MINUS  &none   &trans          &kp LGUI    &none   &trans          &none   &kp PIPE          &kp BACKSLASH      &none   &none
+                        &trans     &trans  &kp UNDERSCORE  &trans      &trans  &kp UNDERSCORE  &trans  &trans
             >;
         };
 
-        layer3 {
+        tools {
             bindings = <
 &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &mo 0                       &none           &none  &none  &none  &none  &none
 &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none                       &none           &none  &none  &none  &none  &none
@@ -69,7 +69,7 @@
 &kp ESC    &kp N1  &kp N2  &kp N3          &kp N4           &kp N5                             &kp N6     &kp N7        &kp N8          &kp N9   &kp N0    &mo 3
 &kp TAB    &kp Q   &kp W   &kp E           &kp R            &kp T                              &kp Y      &kp U         &kp I           &kp O    &kp P     &kp DEL
 &kp BSPC   &kp A   &kp S   &kp D           &kp F            &kp G                              &kp H      &kp J         &kp K           &kp L    &kp SEMI  &kp APOS
-&kp LCTRL  &kp Z   &kp X   &kp C           &kp V            &kp B      &mo 1        &mo 2      &kp N      &kp M         &kp COMMA       &kp DOT  &kp FSLH  &kp LALT
+&kp LCTRL  &kp Z   &kp X   &kp C           &kp V            &kp B      &mo 1        &mo 0      &kp N      &kp M         &kp COMMA       &kp DOT  &kp FSLH  &kp LALT
                            &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp LSHFT    &kp ENTER  &kp SPACE  &kp UP_ARROW  &kp DOWN_ARROW
             >;
 
@@ -82,7 +82,7 @@
 &kp ESC         &kp N1  &kp N2  &kp N3        &kp N4           &kp N5                             &kp N6     &kp N7        &kp N8          &kp N9   &kp N0    &to 7
 &kp TAB         &kp Q   &kp W   &kp F         &kp P            &kp F13                            &kp Y      &kp U         &kp I           &kp O    &kp P     &kp DEL
 &kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp T            &kp F14                            &kp H      &kp J         &kp K           &kp L    &kp SEMI  &kp APOS
-&kp LCTRL       &kp Z   &kp X   &kp C         &kp D            &kp F15    &to 6        &mo 2      &kp N      &kp M         &kp COMMA       &kp DOT  &kp FSLH  &kp LALT
+&kp LCTRL       &kp Z   &kp X   &kp C         &kp D            &kp F15    &to 6        &mo 0      &kp N      &kp M         &kp COMMA       &kp DOT  &kp FSLH  &kp LALT
                                 &kp LEFT_ALT  &kp RIGHT_ARROW  &kp SPACE  &kp ENTER    &kp ENTER  &kp SPACE  &kp UP_ARROW  &kp DOWN_ARROW
             >;
         };
@@ -93,7 +93,7 @@
 &kp ESC         &kp F1          &kp F2          &kp F3           &kp F4           &kp F5                             &kp N6     &kp N7        &kp N8          &kp N9   &kp N0    &to 7
 &kp TAB         &kp Q           &kp UP_ARROW    &kp F            &kp P            &kp F13                            &kp Y      &kp U         &kp I           &kp O    &kp P     &kp DEL
 &kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp T            &kp F14                            &kp H      &kp J         &kp K           &kp L    &kp SEMI  &kp APOS
-&kp LCTRL       &kp Z           &kp X           &kp C            &kp D            &kp F15    &to 5        &mo 2      &kp N      &kp M         &kp COMMA       &kp DOT  &kp FSLH  &kp LALT
+&kp LCTRL       &kp Z           &kp X           &kp C            &kp D            &kp F15    &to 5        &mo 0      &kp N      &kp M         &kp COMMA       &kp DOT  &kp FSLH  &kp LALT
                                                 &kp LEFT_ALT     &kp RIGHT_ARROW  &kp SPACE  &kp ENTER    &kp ENTER  &kp SPACE  &kp UP_ARROW  &kp DOWN_ARROW
             >;
         };
@@ -111,7 +111,7 @@
 &kp ESC        &kp N1  &kp N2  &kp N3          &kp N4           &kp N5                                &kp N6     &kp N7          &kp N8        &kp N9     &kp N0         &mo 3
 &kp TAB        &kp Q   &kp W   &kp F           &kp P            &kp B                                 &kp J      &kp L           &kp U         &kp Y      &kp SEMICOLON  &kp DEL
 &kp BACKSPACE  &kp A   &kp R   &kp S           &kp T            &kp G                                 &kp M      &kp N           &kp E         &kp I      &kp O          &kp SQT
-&kp LCTRL      &kp Z   &kp X   &kp C           &kp D            &kp V      &mo 1             &mo 2    &kp K      &kp H           &kp PERIOD    &kp COMMA  &kp FSLH       &kp LEFT_ALT
+&kp LCTRL      &kp Z   &kp X   &kp C           &kp D            &kp V      &mo 1             &mo 0    &kp K      &kp H           &kp PERIOD    &kp COMMA  &kp FSLH       &kp LEFT_ALT
                                &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp LEFT_SHIFT    &kp RET  &kp SPACE  &kp DOWN_ARROW  &kp UP_ARROW
             >;
         };
